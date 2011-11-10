@@ -1,1 +1,19 @@
-Répertoire de base pour setuper une arborescence de répertoire Mapserver
+MGéospatial
+Simon Mercier 
+smercier@mgeospatial.com
+
+Répertoire de base pour setuper une arborescence de répertoire Mapserver.  Ce setup demande d'avoir installé Mapserver au préalable.
+
+Je vous propose de copier cette arborescence dans le répertoire /var/services/mapserv/.. ou /opt/mapserv/..
+
+Modifier le fichier "wrapper" sda.cgi-bin pour le faire pointer sur le bon répertoire de votre arborescence:
+
+#! /bin/sh
+MS_MAPFILE=/var/services/mapserv/maps/sda.map     <-------------------
+export MS_MAPFILE
+./mapserv
+
+Ensuite copier le fichier sda.cgi-bin dans le répertoire cgi-bin et le renommer.  Ensuite y ajouter les droit d'exécution:
+
+sudo cp sda.cgi-bin /usr/lib/cgi-gin/sda
+sudo chmod +x /usr/lib/cgi-gin/sda
