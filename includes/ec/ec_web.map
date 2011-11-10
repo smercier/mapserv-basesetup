@@ -1,0 +1,31 @@
+WEB
+	IMAGEPATH "tmp/"
+	IMAGEURL "/ms_tmp/"
+	METADATA
+		"wfs_title"		   			"Test simple wfs"
+		"wfs_version"           			"1.0.0"
+		"ows_service_onlineresource"         "http://localhost/t1W5"   	#--> L'identifiant URI ou Namespace de l'entrepôt de données.  Théoriquement unique sur le Web...
+		"ows_updatesequence"   		"123"					#--> Lié au SOS
+		"wms_feature_info_mime_type"	"text/csv"	
+		"ows_fees"					"Aucun"
+		"ows_abstract"				""
+		"ows_keywordlist" 			"ogc,wfs,gml,om"
+		"ows_accessconstraints"                 "bla bla"
+                "ows_contactorganization"		"Mgeospatial"
+		"ows_contactperson"			""       
+		"ows_contactposition"			""
+		"ows_role" 				"staff"
+		"ows_contactelectronicmailaddress"	"info@mgeospatial.com"
+		"ows_contactvoicetelephone"          ""
+		"ows_contactfacsimiletelephone"      "" 
+		"ows_addresstype"			"postal"
+		"ows_address"				"294A de la Seine"
+		"ows_city"			        "St-Nicolas"
+		"ows_stateorprovince"			"Quebec"
+		"ows_postcode" 				"G7A 4Y2"
+		"ows_country"				"Canada"
+		"ows_service_onlineresource"		"http://mgeospatial.com"
+		"ows_enable_request" 			"*" 
+	END
+END
+

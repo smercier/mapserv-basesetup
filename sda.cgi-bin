@@ -1,0 +1,4 @@
+#! /bin/sh
+MS_MAPFILE=/var/services/mapserv/maps/sda.map
+export MS_MAPFILE
+./mapserv

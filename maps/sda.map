@@ -1,0 +1,38 @@
+#-- ========================================================================
+#-- Mgeospatial 
+#--
+#-- Création:  Simon Mercier 
+#-- date :   mars 2011
+#-- Mise à jour: 
+#-- date:par
+#--
+#-- Description:
+#-- Ce fichier contient les données géographiques diffusées en WMS
+#-- utilisées dans pour applications Web.
+#--
+#-- hit test:
+#-- http://server/cgi-bin/mapserv?map=/var/www/services/maps/[name].map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities
+#-- http://server/cgi-bin/sda?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities
+#-- http://server/cgi-bin/mapserv?map=/var/services/maps/sda.map?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities
+#-- ========================================================================
+MAP
+    NAME "sda"
+    INCLUDE '../includes/ec/ec_extent_geo.map'
+    INCLUDE '../includes/ec/ec_map.map'
+    INCLUDE '../includes/ec/ec_web.map'
+    WEB
+        METADATA
+           "wms_title"                  "SDA"
+           "wms_abstract"               "Système de découpage administratif du Québec"
+           "wms_description"            ""
+           "wms_keywordlist"            ""
+	   "wms_onlineresource"        	"http://mapcoop.org/cgi-bin/sda"
+        END
+    END
+    PROJECTION
+        "init=epsg:4326"
+    END 
+
+    
+    INCLUDE '../includes/layer_gouv_mrnf_sda.map'
+ END

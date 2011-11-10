@@ -1,0 +1,794 @@
+#-- ========================================================================
+#-- La Financière agricole du Québec 
+#-- ========================================================================
+SYMBOLSET
+    SYMBOL
+        NAME 'line_solid'
+        TYPE ELLIPSE
+        POINTS 1 1 END
+        FILLED true
+    END 
+    #-- Symbole utilisé pour les points
+    SYMBOL
+        NAME 'circle'
+        TYPE ELLIPSE
+        FILLED TRUE
+        POINTS
+            1 1
+        END
+    END
+    #-- Symbole utilisé pour les points
+    SYMBOL
+        NAME 'square'
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 1
+            0 0
+            1 0
+            1 1
+            0 1
+        END
+    END
+    SYMBOL
+        NAME 'square_on_line'
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 1
+            0 0
+            1 0
+            1 1
+            0 1
+        END
+        POINTS
+            1 10 1 10
+        END
+    END    
+    SYMBOL
+        NAME 'tirete1'
+        TYPE ELLIPSE
+        POINTS 
+            1 1 
+        END
+        FILLED true
+        POINTS 
+            10 5 
+            5 10 
+        END
+    END    
+    SYMBOL
+        NAME 'ellipse'
+        TYPE ELLIPSE
+        FILLED TRUE
+        POINTS
+            1 .5
+        END
+    END
+    SYMBOL
+        NAME 'ellipse2'
+        TYPE ELLIPSE
+        FILLED TRUE
+        POINTS
+            1 .5
+        END
+    END
+    SYMBOL            
+        NAME 'quadrat'
+        TYPE VECTOR
+        POINTS
+            0 0
+            0 1
+            1.4 1
+            1.4 0 
+            0 0
+        END
+        FILLED TRUE
+    END
+    SYMBOL            
+        NAME 'quadrat2'
+        TYPE VECTOR
+        POINTS
+            0 0
+            0 0.7
+            1.7 0.7
+            1.7 0 
+            0 0
+        END
+        FILLED TRUE
+    END
+    SYMBOL            
+        NAME 'quadrat2_contour'
+        TYPE VECTOR
+        POINTS
+            0 0
+            0 0.8
+            1.7 0.8
+            1.7 0 
+            0 0
+        END
+        FILLED TRUE
+    END            
+    SYMBOL
+        NAME 'baisse'
+        TYPE TRUETYPE
+        FONT "windg3"
+        CHARACTER "È"
+    END
+    SYMBOL
+        NAME 'stable'
+        TYPE TRUETYPE
+        FONT "arial"
+        CHARACTER "-"
+    END
+    SYMBOL
+        NAME 'hausse'
+        TYPE TRUETYPE
+        FONT "windg3"
+        CHARACTER "Ç"
+    END
+   #-- Symbole utilisé pour les points
+    SYMBOL
+        NAME 'square'
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 1
+            0 0
+            1 0
+            1 1
+            0 1
+        END
+    END
+    SYMBOL
+        NAME 'rectangle'
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 1
+            0 0
+            2 0
+            2 1
+            0 1
+        END
+    END 
+    SYMBOL
+        NAME 'triangle'
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 1
+            .5 0
+            1 1
+            0 1
+        END 
+    END    
+    SYMBOL
+        NAME 'rectangle2'
+        TYPE VECTOR
+        FILLED TRUE
+        #LINECAP round
+        POINTS
+            0 1
+            0 0
+            2.5 0
+            2.5 1
+            0 1
+        END
+    END      
+    SYMBOL
+        NAME 'star'
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 .375
+            .35 .375
+            .5 0
+            .65 .375
+            1 .375
+            .75 .625
+            .875 1
+            .5 .75
+            .125 1
+            .25 .625
+        END
+    END
+    SYMBOL
+        NAME 'square_on_line'
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 1
+            0 0
+            1 0
+            1 1
+            0 1
+        END
+        POINTS
+            1 10 1 10
+        END
+    END   
+ 
+    #--Symbole images
+    SYMBOL
+        NAME 'saaq'
+        TYPE pixmap
+        IMAGE 'abc-000.gif'
+        TRANSPARENT 50
+    END
+    SYMBOL
+        NAME 'clsc'
+        TYPE pixmap
+        IMAGE 'clsc.gif'
+        TRANSPARENT 50
+    END
+    SYMBOL
+        NAME 'sq'
+        TYPE pixmap
+        IMAGE 'logo_sq.gif'
+        TRANSPARENT 227
+    END
+    SYMBOL
+        NAME 'autoroute_bgr'
+        TYPE PIXMAP
+        IMAGE 'autoroute.gif'
+        TRANSPARENT 12
+    END
+    SYMBOL
+        NAME 'route_prov_bgr'
+        TYPE pixmap
+        IMAGE 'provincial.gif'
+        TRANSPARENT 15
+    END
+    SYMBOL
+        NAME 'autoroute_bgr_v2'
+        TYPE PIXMAP
+        IMAGE 'autoroute_mtq.gif'
+        TRANSPARENT 104
+    END
+    SYMBOL
+        NAME 'route_prov_bgr_v2'
+        TYPE pixmap
+        IMAGE 'provincial_mtq.gif'
+        TRANSPARENT 128
+    END
+    SYMBOL
+        NAME 'marker_green'
+        TYPE pixmap
+        IMAGE 'marker-green.gif'
+        TRANSPARENT 200
+    END
+    
+    SYMBOL
+        NAME 'gouv_qc_logo'
+        TYPE pixmap
+        IMAGE 'gouv_qc_logo.gif'
+        TRANSPARENT 0
+    END
+    
+    #--Symbologie Hydro-Québec
+  	SYMBOL
+	    NAME 'hatch-lines'
+	    TYPE HATCH
+	END
+    #--========================================================================
+    #--Symboles TrueType liés à l'utilisation de la BDAT
+    #--La majorité des ces symboles proviennent des Fonts ESRI
+    #--========================================================================  
+    SYMBOL
+        NAME "rapide_tt"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_cave2"
+        ANTIALIAS TRUE
+        CHARACTER "&#78;"
+    END
+     SYMBOL
+        NAME "milieu_humide_tt"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_cave2"
+        ANTIALIAS TRUE
+        CHARACTER "&#83;"
+    END   
+    SYMBOL
+        NAME "depot_tt"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_cave1"
+        ANTIALIAS FALSE
+        CHARACTER "&#236;"
+    END  
+    SYMBOL
+        NAME "tour_telecom"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_telecom"
+        ANTIALIAS FALSE
+        CHARACTER "&#89;"
+    END  
+    SYMBOL
+        NAME "tour"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_carto"
+        ANTIALIAS FALSE
+        CHARACTER "&#168;"
+    END  
+    SYMBOL
+        NAME "reservoir"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_carto"
+        ANTIALIAS FALSE
+        CHARACTER "&#65;"
+    END    
+    SYMBOL
+        NAME "eglise"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "windg"
+        ANTIALIAS FALSE
+        CHARACTER "&#86;"
+    END
+    SYMBOL
+        NAME "hotel_ville"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "mif_real_e"
+        ANTIALIAS FALSE
+        CHARACTER "&#77;"
+    END
+    SYMBOL
+        NAME "centre_hospitalier"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_trans"
+        ANTIALIAS FALSE
+        CHARACTER "&#80;"
+    END
+    SYMBOL
+        NAME "services_maritimes"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "transport"
+        ANTIALIAS FALSE
+        CHARACTER "&#74;"
+    END
+    SYMBOL
+        NAME "prison"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_real_e"
+        ANTIALIAS FALSE
+        CHARACTER "&#76;"
+    END
+    SYMBOL
+        NAME "sgs"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_defau"
+        ANTIALIAS TRUE
+        CHARACTER "&#118;"
+    END
+    SYMBOL
+        NAME "hsld"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_defau"
+        ANTIALIAS TRUE
+        CHARACTER "&#118;"
+    END
+    SYMBOL
+        NAME "autre_soins"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_defau"
+        ANTIALIAS TRUE
+        CHARACTER "&#71;"
+    END
+    SYMBOL
+        NAME "ecole"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_defau"
+        ANTIALIAS TRUE
+        CHARACTER "&#110;"
+    END
+    SYMBOL
+        NAME "universite"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "mif_real_e"
+        ANTIALIAS TRUE
+        CHARACTER "&#40;"
+    END
+    SYMBOL
+        NAME "caserne"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_trans"
+        ANTIALIAS FALSE
+        CHARACTER "&#78;"
+    END
+    SYMBOL
+        NAME "caserne2"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "esri_crim"
+        ANTIALIAS FALSE
+        CHARACTER "&#107;"
+    END
+    SYMBOL
+        NAME "pine1"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_sym"
+        ANTIALIAS FALSE
+        CHARACTER "&#68;"
+    END
+    SYMBOL
+        NAME "pine2"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_sym"
+        ANTIALIAS FALSE
+        CHARACTER "&#69;"
+    END
+    SYMBOL
+        NAME "pince_desi"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "esri_fire"
+        ANTIALIAS FALSE
+        CHARACTER "&#84;"
+    END
+    SYMBOL
+        NAME "ambulance"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_trans"
+        ANTIALIAS FALSE
+        CHARACTER "&#81;"
+    END
+    SYMBOL
+        NAME "avion"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_trans"
+        ANTIALIAS FALSE
+        CHARACTER "&#86;"
+    END
+    SYMBOL
+        NAME "baril"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_mimi"
+        ANTIALIAS FALSE
+        CHARACTER "&#83;"
+    END
+    SYMBOL
+        NAME "funeraire"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_real_e"
+        ANTIALIAS FALSE
+        CHARACTER "&#67;"
+    END
+    SYMBOL
+    	NAME "sanitaire"
+    	TYPE TRUETYPE
+    	FILLED true
+    	FONT "esri_carto"
+    	ANTIALIAS false
+    	CHARACTER "&#100;"
+    END   
+    SYMBOL
+        NAME "cimetiere"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_real_e"
+        ANTIALIAS FALSE
+        CHARACTER "&#71;"
+    END
+    SYMBOL
+    	NAME "halde"
+    	TYPE TRUETYPE
+    	FILLED true
+    	FONT "esri_carto"
+    	ANTIALIAS false
+    	CHARACTER "&#99;"
+    END 
+    SYMBOL
+    	NAME "port_plai"
+    	TYPE TRUETYPE
+    	FILLED true
+    	FONT "esri_carto"
+    	ANTIALIAS false
+    	CHARACTER "&#206;"
+    END      
+    SYMBOL
+        NAME "chimic"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "esri_env_haz"
+        ANTIALIAS FALSE
+        CHARACTER "&#74;"
+    END
+    SYMBOL
+        NAME 'habit'
+        TYPE TRUETYPE
+        FILLED true
+        FONT 'esri_geom'
+        ANTIALIAS false
+        CHARACTER "&#35;"
+    END
+    
+    SYMBOL
+        NAME 'hydravion'
+        TYPE TRUETYPE
+        FILLED true
+        FONT 'mif_trans'
+        ANTIALIAS false
+        CHARACTER "&#89;"
+    END
+    SYMBOL
+        NAME "entrepot"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "esri_business"
+        ANTIALIAS FALSE
+        CHARACTER "&#52;"
+    END
+    SYMBOL
+        NAME "police_inuit"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_geom"
+        ANTIALIAS FALSE
+        CHARACTER "&#164;"
+    END
+    SYMBOL
+        NAME "police_autochtone"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_defau"
+        ANTIALIAS FALSE
+        CHARACTER "&#94;"
+    END
+    SYMBOL
+        NAME "police_municipale"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_defau"
+        ANTIALIAS FALSE
+        CHARACTER "&#94;"
+    END
+    SYMBOL
+        NAME "arial_c"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "arial"
+        ANTIALIAS FALSE
+        CHARACTER "&#67;"
+    END
+    
+    SYMBOL
+        NAME "arial_s"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "arial"
+        ANTIALIAS FALSE
+        CHARACTER "&#83;"
+    END
+    SYMBOL
+        NAME "clinicmed"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_mimi"
+        ANTIALIAS FALSE
+        CHARACTER "&#103;"
+    END
+    SYMBOL
+        NAME "pharmacie"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_mimi"
+        ANTIALIAS FALSE
+        CHARACTER "&#43;"
+    END
+    SYMBOL
+        NAME "HSLD2"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_carto"
+        ANTIALIAS FALSE
+        CHARACTER "&#50;"
+    END
+    SYMBOL
+        NAME "borne"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "esri_defau"
+        ANTIALIAS FALSE
+        CHARACTER "&#68;"
+    END
+    SYMBOL
+        NAME "maifun"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_real_e"
+        ANTIALIAS FALSE
+        CHARACTER "&#78;"
+    END
+    SYMBOL
+        NAME "transporteur"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "mif_trans"
+        ANTIALIAS FALSE
+        CHARACTER "&#67;"
+    END
+    SYMBOL
+        NAME "borne2"
+        TYPE TRUETYPE
+        FILLED FALSE
+        FONT "esri_surv"
+        ANTIALIAS FALSE
+        CHARACTER "&#105;"
+    END
+    SYMBOL
+        NAME "barrage"
+        TYPE TRUETYPE
+        FILLED true
+        FONT "esri_carto"
+        ANTIALIAS false
+        CHARACTER "&#81;"
+    END
+    SYMBOL
+        NAME "mine"
+        TYPE TRUETYPE
+        FILLED true
+        FONT "esri_geom"
+        ANTIALIAS false
+        CHARACTER "&#198;"
+    END
+    SYMBOL
+    	NAME "mine2"
+    	TYPE TRUETYPE
+    	FILLED true
+    	FONT "esri_carto"
+    	ANTIALIAS false
+    	CHARACTER "&#204;"
+    END       
+    SYMBOL
+        NAME "fleur_lys_qc"
+        TYPE TRUETYPE
+        FILLED true
+        FONT "hq_picto_divers"
+        ANTIALIAS false
+        CHARACTER "&#83;"
+    END
+    SYMBOL
+        NAME "hydro_qc"
+        TYPE TRUETYPE
+        FILLED true
+        FONT "hq_picto_divers"
+        ANTIALIAS false
+        CHARACTER "&#72;"
+    END
+    SYMBOL
+        NAME "feuille_erable"
+        TYPE TRUETYPE
+        FILLED true
+        FONT "hq_picto_naturel"
+        ANTIALIAS false
+        CHARACTER "&#68;"
+    END
+    #--Symboles TrueType liés à l'utilisation de la BDAT
+    #--La majorité des ces symboles proviennent des Fonts ESRI
+    SYMBOL
+        NAME "phare"
+        TYPE TRUETYPE
+        FILLED TRUE
+        FONT "esri_carto"
+        ANTIALIAS FALSE
+        CHARACTER "&#86;"
+    END  
+    SYMBOL
+    	NAME "etang_epu"
+    	TYPE TRUETYPE
+    	FILLED true
+    	FONT "esri_geom"
+    	ANTIALIAS false
+    	CHARACTER "&#35;"
+    END
+    SYMBOL
+    	NAME "banc_empr"
+    	TYPE TRUETYPE
+    	FILLED true
+    	FONT "esri_envir_ha"
+    	ANTIALIAS false
+    	CHARACTER "&#49;"
+    END      
+    SYMBOL
+    	NAME "ski"
+    	TYPE TRUETYPE
+    	FILLED true
+    	FONT "esri_us_for1"
+    	ANTIALIAS false
+    	CHARACTER "&#42;"
+    END     
+    SYMBOL
+        NAME "barrage"
+        TYPE TRUETYPE
+        FILLED true
+        FONT "esri_carto"
+        ANTIALIAS false
+        CHARACTER "&#81;"
+    END
+	SYMBOL
+		NAME "losange"
+		TYPE TRUETYPE
+		FILLED true
+		FONT "esri_envir"
+		ANTIALIAS false
+		CHARACTER "&#96;"
+	END 
+	SYMBOL
+		NAME "etoile"
+		TYPE TRUETYPE
+		FILLED true
+		FONT "esri_envir"
+		ANTIALIAS false
+		CHARACTER "&#90;"
+	END  
+     SYMBOL
+        NAME "aeroport"
+		TYPE TRUETYPE
+		FILLED true
+		FONT "esri_envir"
+		ANTIALIAS false
+		CHARACTER "&#55;"
+	END  
+    SYMBOL
+    	NAME "hydrobase"
+    	TYPE TRUETYPE
+    	FILLED true
+    	FONT "esri_crime"
+    	ANTIALIAS false
+    	CHARACTER "&#144;"
+    END
+    SYMBOL
+    	NAME "poste_elec"
+    	TYPE TRUETYPE
+    	FILLED true
+    	FONT "esri_envir"
+    	ANTIALIAS false
+    	CHARACTER "&#255;"
+    END  
+    SYMBOL
+		NAME "central"
+		TYPE TRUETYPE
+		FILLED true
+		FONT "esri_carto"
+		ANTIALIAS false
+		CHARACTER "&#113;"
+	END    
+    SYMBOL
+    	NAME "camping"
+    	TYPE TRUETYPE
+    	FILLED true
+    	FONT "esri_envir"
+    	ANTIALIAS false
+    	CHARACTER "&#60;"
+    END  
+    SYMBOL
+        NAME "tourisme"
+        TYPE TRUETYPE
+        FILLED true
+        FONT "esri_defau"
+        ANTIALIAS false
+        CHARACTER "&#75;"
+    END    
+END

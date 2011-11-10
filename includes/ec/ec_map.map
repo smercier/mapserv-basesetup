@@ -1,0 +1,56 @@
+#--    INCLUDE '/var/www/services/includes/ec/ec_map.map'
+SIZE 700 500
+IMAGETYPE PNG
+IMAGECOLOR 0 0 0  
+UNITS DD
+SYMBOLSET                   "../symbols/symbols.map"
+FONTSET                     "../fonts/fonts.map"
+#CONFIG MS_ENCRYPTION_KEY    "../keygeo/mspkey.txt"
+#CONFIG MS_ERRORFILE         "/var/services/logs/mapserv.log"
+
+OUTPUTFORMAT
+	NAME "gif"
+	DRIVER "GD/GIF"
+	MIMETYPE "image/gif"
+	IMAGEMODE PC256
+	EXTENSION "gif"
+	TRANSPARENT ON
+END 
+OUTPUTFORMAT
+        NAME "png"
+        MIMETYPE "image/png"
+        EXTENSION "png"
+        DRIVER AGG/PNG
+        IMAGEMODE RGBA
+        TRANSPARENT ON
+        FORMATOPTION "TRANSPARENT=ON"
+        FORMATOPTION "INTERLACE=OFF"  
+#--       FORMATOPTION "PALETTE_FORCE=TRUE"
+#--       FORMATOPTION "PALETTE=/var/www/services/couleur/file.txt"
+END  
+OUTPUTFORMAT
+	NAME "jpeg"
+	DRIVER "AGG/JPEG"
+	MIMETYPE "image/jpeg"
+	IMAGEMODE RGB
+	EXTENSION "jpg"
+	FORMATOPTION "QUALITY=60"
+END
+
+#-- Légende
+LEGEND
+    OUTLINECOLOR 255 255 255
+    IMAGECOLOR 255 255 255
+    POSITION LL
+    KEYSIZE 40 30
+    KEYSPACING 5 5
+    POSTLABELCACHE TRUE
+    LABEL
+        TYPE TRUETYPE
+        FONT "vera"
+        SIZE 10
+        POSITION CL
+        OFFSET 0 0
+        SHADOWSIZE 2 2
+    END
+END

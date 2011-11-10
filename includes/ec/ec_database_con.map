@@ -1,0 +1,14 @@
+#--   INCLUDE "../includes/ec/ec_database_con.map"
+        CONNECTIONTYPE oraclespatial
+        #--CONNECTION "{5ACE86C1C852C937B72C65170F96C6062B8D055438EB8A61}"
+        CONNECTION "geo/geo@test"
+        PROCESSING "CLOSE_CONNECTION=DEFER"
+
+#INCLUDE "../include/ec/ec_database_con.map"
+        CONNECTIONTYPE postgis
+        CONNECTION "host=serveur dbname=geo user=geo password=geo port=5432 options='-c client_encoding=LATIN1'"
+        #-- On utilise l'option '-c client_encoding=LATIN1' parce que la réponse Mapserver est par défaut dans un encodage ISO-8859-1
+        #-- soit; <?xml version="1.0" encoding="ISO-8859-1" ?>.  Pour cette raison on doit connecter à la BD dans le même encodage
+        #-- ISO-8859-1=LATIN1. Si on ne fait pas ce type de connexion on va avoir de drôle de caractère dans l'interprétation du XML par le client
+        #-- genre Gaia...
+        PROCESSING "CLOSE_CONNECTION=DEFER"

@@ -1,0 +1,6 @@
+        #--INCLUDE "/var/www/services/include/ec/ec_getfeature.map"
+        DUMP TRUE       
+        HEADER "/var/www/services/templates/todo.html"
+        TEMPLATE "/var/www/services/templates/todo.html"
+        TOLERANCE 10
+        TOLERANCEUNITS PIXELS

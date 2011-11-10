@@ -1,0 +1,119 @@
+#-- La Financière agricole du Québec
+#--
+#-- Création:  Simon Mercier
+#-- date :   mars 2011
+#-- Mise à jour:
+#-- date:par
+#-- date:par
+#--
+#-- Description:
+#-- Ce fichier contient un certain nombre de layer provenant du msp, diffusés en Cascade via les applications de la FADQ
+#-- On doit les difuser en cascade parce que l'accès à ces layers est exclusivement autorisé au proxy de la FADQ
+#--
+#-- Accès wrapper et test:
+#-- http://sigtest.fadq.qc/cgi-bin/mapserv?map=/var/www/services/maps/[name].map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities
+#-- http://sigtest.fadq.qc/cgi-bin/msp?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilitie
+#-- ========================================================================
+MAP
+    NAME "MSP"
+    #INCLUDE '../includes/ec/ec_extent_geo.map'
+    EXTENT -1100000 -23500 1100000 2253500
+    INCLUDE '../includes/ec/ec_map.map'
+    INCLUDE '../includes/ec/ec_web.map'
+    WEB
+        METADATA
+           "wms_title"                 "MSP"
+           "wms_abstract"              "Services web en cascade récupérés au Ministère de la sécurité publique"
+           "wms_description"           ""
+           "wms_keywordlist"           ""
+           "wms_onlineresource"        "http://sigtest.fadq.qc/cgi-bin/msp"
+        END
+    END
+    PROJECTION
+        "init=epsg:32198"
+    END
+    LAYER
+        NAME "PROVINCE_QC"
+        TYPE RASTER
+        CONNECTION "http://geoegl.msp.gouv.qc.ca/cgi-wms/mapserv?map=bdtq"
+        CONNECTIONTYPE WMS
+        METADATA
+            "wms_srs"             "EPSG:32198"
+            "wms_name"            "PROVINCE_QC"
+            "wms_title"           "Province"
+            "wms_server_version"  "1.1.1"
+            "wms_format"          "image/png"
+        END  
+    END
+    LAYER
+        NAME "VEGETATION"
+        TYPE RASTER
+        CONNECTION "http://geoegl.msp.gouv.qc.ca/cgi-wms/mapserv?map=bdtq"
+        CONNECTIONTYPE WMS
+        METADATA
+            "wms_srs"             "EPSG:32198"
+            "wms_name"            "VEGETATION"
+            "wms_title"           "Végétation"
+            "wms_server_version"  "1.1.1"
+            "wms_format"          "image/png"
+        END
+    END
+    LAYER
+        NAME "HYDROGRAPHIE"
+        TYPE RASTER
+        CONNECTION "http://geoegl.msp.gouv.qc.ca/cgi-wms/mapserv?map=bdtq"
+        CONNECTIONTYPE WMS
+        METADATA
+            "wms_srs"             "EPSG:32198"
+            "wms_name"            "HYDROGRAPHIE"
+            "wms_title"           "Hydrographie"
+            "wms_server_version"  "1.1.1"
+            "wms_format"          "image/png"
+        END
+    END
+    LAYER
+        NAME "MDDEP_RH_HYD_BASE_L"
+        TYPE RASTER
+        CONNECTION "http://geoegl.msp.gouv.qc.ca/cgi-wms/mapserv?map=bdtq"
+        CONNECTIONTYPE WMS
+        METADATA
+            "wms_srs"             "EPSG:32198"
+            "wms_name"            "MDDEP_RH_HYD_BASE_L"
+            "wms_title"           "Hydronyme du réseau hydrique"
+            "wms_server_version"  "1.1.1"
+            "wms_format"          "image/png"
+        END
+    END
+    LAYER
+        NAME "EQUIPEMENTS"
+        TYPE RASTER
+        CONNECTION "http://geoegl.msp.gouv.qc.ca/cgi-wms/mapserv?map=bdtq"
+        CONNECTIONTYPE WMS
+        METADATA
+            "wms_srs"             "EPSG:32198"
+            "wms_name"            "EQUIPEMENTS"
+            "wms_title"           "Équipements"
+            "wms_server_version"  "1.1.1"
+            "wms_format"          "image/png"
+        END
+    END
+    LAYER
+        NAME "BATIMENTS"
+        TYPE RASTER
+        CONNECTION "http://geoegl.msp.gouv.qc.ca/cgi-wms/mapserv?map=bdtq"
+        CONNECTIONTYPE WMS
+        METADATA
+            "wms_srs"             "EPSG:32198"
+            "wms_name"            "BATIMENTS"
+            "wms_title"           "Bâtiments"
+            "wms_server_version"  "1.1.1"
+            "wms_format"          "image/png"
+        END
+    END
+
+
+
+
+
+ END
+

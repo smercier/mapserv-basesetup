@@ -1,0 +1,91 @@
+	#pas testé simon 14 juin 2011
+	OUTPUTFORMAT
+		NAME "geojson"
+		DRIVER "TEMPLATE"
+		MIMETYPE "application/json; subtype=geojson"
+		FORMATOPTION "FILE=../misc/rfc36.tmpl"
+	END
+        #pas testé simon 14 juin 2011
+	OUTPUTFORMAT
+		NAME "CSV"
+		DRIVER "OGR/CSV"
+		MIMETYPE "text/csv"
+		FORMATOPTION "LCO:GEOMETRY=AS_WKT"
+		FORMATOPTION "STORAGE=filesystem"
+		FORMATOPTION "FORM=simple"
+		FORMATOPTION "FILENAME=result.csv"
+	END
+        #pas testé simon 14 juin 2011
+	OUTPUTFORMAT
+		NAME "CSVSTREAM"
+		DRIVER "OGR/CSV"
+		MIMETYPE "text/csv; streamed"
+		FORMATOPTION "LCO:GEOMETRY=AS_WKT"
+		FORMATOPTION "STORAGE=stream"
+		FORMATOPTION "FORM=simple"
+		FORMATOPTION "FILENAME=result.csv"
+	END
+        #marche partiellement. juste avec les points testé simon 14 juin 2011
+        OUTPUTFORMAT
+                NAME "OGRKML"
+                DRIVER "OGR/KML"
+                MIMETYPE "application/vnd.google-earth.kml+xml"
+                #FORMATOPTION "STORAGE=filesystem"
+                FORMATOPTION "FORM=simple"
+		FORMATOPTION "DSCO:AltitudeMode=absolute"
+                FORMATOPTION "FILENAME=result.kml"
+        END
+        #OK testé simon 14 juin 2011
+	OUTPUTFORMAT
+		NAME "OGRGML"
+		DRIVER "OGR/GML"
+		MIMETYPE "text/xml; subtype=gml/2.1.2; driver=ogr"
+		FORMATOPTION "STORAGE=memory"
+		FORMATOPTION "FORM=multipart"
+		FORMATOPTION "FILENAME=result.gml"
+	END
+        #OK testé simon 14 juin 2011
+	OUTPUTFORMAT
+		NAME "SHAPEZIP"
+		DRIVER "OGR/ESRI Shapefile"
+		MIMETYPE "application/shapefile"
+		FORMATOPTION "STORAGE=filesystem"
+		FORMATOPTION "FORM=zip"
+		FORMATOPTION "FILENAME=result.zip"
+	END
+        #marche pas testé simon 14 juin 2011
+	OUTPUTFORMAT
+		NAME "MIDMIF"
+		DRIVER "OGR/MapInfo File"
+		FORMATOPTION "STORAGE=filesystem"
+		FORMATOPTION "FORM=multipart"
+		FORMATOPTION "DSCO:FORMAT=MIF"
+		FORMATOPTION "FILENAME=result.mif"
+	END
+        #pas testé simon 14 juin 2011
+	OUTPUTFORMAT
+		NAME "MultiMIDMIF"
+		DRIVER "OGR/MapInfo File"
+		FORMATOPTION "STORAGE=filesystem"
+		FORMATOPTION "FORM=multipart"
+		FORMATOPTION "DSCO:FORMAT=MIF"
+		FORMATOPTION "FILENAME=result"
+	END
+        #ne peut pas être utilisé avec un WFS pour extraction
+	OUTPUTFORMAT
+		NAME "KML"
+		DRIVER "KML"
+		MIMETYPE "application/vnd.google-earth.kml+xml"
+		IMAGEMODE RGB
+		EXTENSION "kml"
+		FORMATOPTION 'ATTACHMENT=result.kml'  #name of kml file returned
+		#FORMATOPTION "maxfeaturestodraw=100"
+	END
+	OUTPUTFORMAT
+		NAME "kmz"
+		DRIVER "KMZ"
+		MIMETYPE "application/vnd.google-earth.kmz"
+		IMAGEMODE RGB
+		EXTENSION "kmz"
+		FORMATOPTION 'ATTACHMENT=result.kmz'  #name of kmz file returned
+	END

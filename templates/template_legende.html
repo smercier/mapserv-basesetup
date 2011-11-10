@@ -1,0 +1,40 @@
+[leg_header_html]
+var aszLegendArray = {};
+var aszLegendDisplayName = {};
+var nLayerId = "";
+var szClassId = "";
+var szGroup = "";
+[/leg_header_html]
+[leg_layer_html order=ascending opt_flag=15]
+nLayerId = [leg_layer_index];
+szGroup = "[if name=layer_group oper=isset][leg_layer_group][/if][if name=layer_group oper=isnull][leg_layer_name][/if]";
+szDisplayName = "[if name=wms_group_title oper=isset][metadata name=WMS_GROUP_TITLE][/if][if name=wms_group_title oper=isnull][if name=wms_title oper=isset][metadata name=WMS_TITLE][/if][/if]";
+if (szDisplayName == "") 
+    szDisplayName = "[if name=layer_group oper=isnull][leg_layer_group][/if][if name=layer_group oper=isset][leg_layer_name][/if]";
+if(!aszLegendArray[szGroup]) {
+    aszLegendArray[szGroup] = {};
+}
+aszLegendDisplayName[szGroup] = szDisplayName;
+aszLegendArray[szGroup][nLayerId] = {};
+aszLegendArray[szGroup][nLayerId]["name"] = "[leg_layer_name]";
+aszLegendArray[szGroup][nLayerId]["title"] = "[if name=wms_title oper=isnull][leg_layer_name][/if][if name=wms_title oper=isset][metadata name=WMS_TITLE][/if]";
+aszLegendArray[szGroup][nLayerId]["msp_classe_meta"] = "[if name=msp_classe_meta oper=isnull][leg_layer_name][/if][if name=msp_classe_meta oper=isset][metadata name=MSP_CLASSE_META][/if]";
+aszLegendArray[szGroup][nLayerId]["queryable"] = [if name=layer_queryable oper=eq value=1]true[/if][if name=layer_queryable oper=eq value=0]false[/if];
+aszLegendArray[szGroup][nLayerId]["selected"] = 0[if name=layer_status oper=eq  value=1]1[/if][if name=layer_status oper=eq value=2]1[/if];
+aszLegendArray[szGroup][nLayerId]["minscale"] = [leg_layer_minscale];
+aszLegendArray[szGroup][nLayerId]["maxscale"] = [leg_layer_maxscale];
+aszLegendArray[szGroup][nLayerId]["class"] = {};
+aszLegendArray[szGroup][nLayerId]["opacity"] = "[if name=opacity oper=isset][metadata name=opacity][/if]";
+
+
+
+[/leg_layer_html]
+[leg_class_html opt_flag=15]
+nClassId = [leg_class_index];
+aszLegendArray[szGroup][nLayerId]["class"][nClassId] = {};
+aszLegendArray[szGroup][nLayerId]["class"][nClassId]["name"] = "[leg_class_name]";
+[/leg_class_html]
+
+[leg_footer_html]
+
+[/leg_footer_html]

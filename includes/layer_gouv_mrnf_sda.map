@@ -1,0 +1,194 @@
+    LAYER
+        NAME "MUNIC_S_TNO"
+        GROUP "SDA"
+	DATA '../data/bdga/munic_s.shp'
+        #FILTER "mus_de_ind = 'territoire non organisé' and mus_nm_mun not like 'TNO aquatique%'"
+        TYPE POLYGON
+        LABELITEM "MUS_NM_MUN"
+        LABELCACHE ON
+        INCLUDE '../includes/ec/ec_getfeature.map'
+        MAXSCALEDENOM 400000
+        LABELMAXSCALEDENOM 2000000
+        METADATA
+            INCLUDE                 '../includes/ec/ec_meta_srs.map'
+             "wms_group_title"       "Limites administratives"
+            "wms_name"              "MUNIC_S_TNO"
+            "wms_title"             "Territoire non organisé"
+            "wms_abstract"          ""
+            INCLUDE                 '../includes/ec/ec_meta_layer.map'
+        END
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CLASSITEM "MUS_NO_IND"
+        CLASS
+            NAME "Territoire autochtone"
+            EXPRESSION "50 02 0002 000"
+            LABEL
+                OUTLINECOLOR 235 235 235
+                TYPE TRUETYPE
+                FONT "vera"
+                SIZE 8
+                POSITION AUTO
+                COLOR 205 205 102
+                MINDISTANCE 500000
+            END
+            STYLE
+                OUTLINECOLOR 205 205 102
+            END
+        END
+    END
+    LAYER
+        NAME "MUNIC_S"
+        GROUP "SDA"
+        DATA "../data/bdga/munic_s.shp"
+        TYPE POLYGON
+        LABELITEM "MUS_NM_MUN"
+        INCLUDE '../includes/ec/ec_getfeature.map'
+        MAXSCALEDENOM 40000
+        LABELMAXSCALEDENOM 200000
+        METADATA
+             INCLUDE                 '../includes/ec/ec_meta_srs.map'
+            "wms_name"              "MUNIC_S"
+            "wms_title"             "Municipalité"
+            "wms_keywordlist"       ""
+            "wms_abstract"          "(1/400 000)"
+            INCLUDE                 '../includes/ec/ec_meta_layer.map'
+        END
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CLASSITEM "MUS_NO_IND"
+        CLASS
+            NAME "Municipalite"
+            EXPRESSION "50 02 0001 000"
+            LABEL
+                OUTLINECOLOR 235 235 235
+                TYPE TRUETYPE
+                FONT "vera"
+                SIZE 8
+                POSITION AUTO
+                COLOR 34 139 34
+                MINDISTANCE 1000000
+            END
+            STYLE
+                OUTLINECOLOR 34 139 34
+            END
+        END
+    END
+
+#-- Layers Municipalité régionale de compté
+    LAYER
+        NAME "MRC_S"
+        GROUP "SDA"
+        DATA '../data/bdga/mrc_s.shp'
+        TYPE POLYGON
+        LABELITEM "MRS_NM_MRC"
+        INCLUDE '../includes/ec/ec_getfeature.map'
+        MAXSCALEDENOM 4000000
+	LABELMAXSCALEDENOM 200000
+        METADATA
+            "wms_name"              "MRC_S"
+            "wms_title"             "Municipalité régionale de compté"
+            "wms_keywordlist"       ""
+            "wms_abstract"          "(1/4 000 000)"
+            INCLUDE                 '../includes/ec/ec_meta_srs.map'
+            INCLUDE                 '../includes/ec/ec_meta_layer.map'
+        END
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CLASSITEM "MRS_NO_IND"
+        CLASS
+            NAME "MRC"
+            EXPRESSION "50 02 0010 000"
+            LABEL
+                OUTLINECOLOR 235 235 235
+                TYPE TRUETYPE
+                FONT "vera"
+                SIZE 10
+                POSITION AUTO
+                COLOR 0 112 255
+            END
+            STYLE
+                OUTLINECOLOR 0 112 255
+                WIDTH 2
+            END
+        END
+    END
+#-- Layers Région administrative...
+    LAYER
+        NAME "REGIO_S"
+        GROUP "SDA"
+        DATA '../data/bdga/regio_s.shp'
+        TYPE POLYGON
+        LABELITEM "RES_NM_REG"
+	LABELCACHE ON
+        INCLUDE '../includes/ec/ec_getfeature.map'
+        LABELMAXSCALEDENOM 2000000
+        METADATA
+            "wms_name"              "REGIO_S"
+            "wms_title"             "Région Administrative"
+            "wms_keywordlist"       ""
+            "wms_abstract"          ""
+            INCLUDE                 '../includes/ec/ec_meta_srs.map'
+            INCLUDE                 '../includes/ec/ec_meta_layer.map'
+        END
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CLASS
+            NAME "Région administrative"
+            LABEL
+                OUTLINECOLOR 235 235 235
+                TYPE TRUETYPE
+                FONT "vera"
+                SIZE 10
+                POSITION AUTO
+                COLOR 144 0 0
+            END
+            STYLE
+                OUTLINECOLOR 144 0 0
+                WIDTH 3
+            END
+        END
+    END
+    #-- Layers Territoire autochtone
+    LAYER
+        NAME "MUNIC_S_AUTOCH"
+        GROUP "SDA"
+        DATA '../data/bdga/munic_s.shp'
+        TYPE POLYGON
+        LABELITEM "MUS_NM_MUN"
+        INCLUDE '../includes/ec/ec_getfeature.map'
+        MAXSCALEDENOM 400000
+        LABELMAXSCALEDENOM 200000
+        METADATA
+            "wms_name"              "MUNIC_S_AUTOCH"
+            "wms_title"             "Territoire autochtone"
+            "wms_abstract"          "(1/400 000)"
+            INCLUDE                 '../includes/ec/ec_meta_srs.map'
+            INCLUDE                 '../includes/ec/ec_meta_layer.map'
+         END
+        PROJECTION
+            "init=epsg:4326"
+        END
+        CLASSITEM "MUS_NO_IND"
+        CLASS
+            NAME "Territoire autochtone"
+            EXPRESSION "50 02 0003 000"
+            LABEL
+                OUTLINECOLOR 235 235 235
+                TYPE TRUETYPE
+                FONT "vera"
+                SIZE 8
+                POSITION AUTO
+                COLOR 148 0 211
+                MINDISTANCE 50000
+            END
+            STYLE
+                OUTLINECOLOR 148 0 211
+            END
+        END
+    END
+END

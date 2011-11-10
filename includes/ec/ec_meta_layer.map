@@ -1,0 +1,6 @@
+#INCLUDE '../include/ec/ec_meta_layer.map'
+            "wms_server_version"    "1.1.1"
+            INCLUDE '../includes/ec/ec_meta_srs.map'
+            "wms_extent"            "-81 43 -53 63"
+            "ows_include_items"     "all"
+            "ows_exclude_items"     "OBJECTID"        
